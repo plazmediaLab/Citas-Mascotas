@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Formulario from './components/Formulario.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container fg-dm-1 p-3 mt-3">
+      <h1 className="txt-a-c font-1 mb-5"><i className="a-emoji_food_beverage txt-secondary af-m"></i> Administrador de pacientes</h1>
+
+      <div className="fg-dm-2 p-3">
+        <div className="col-row">
+          <div className="col-6">
+            <Formulario />
+          </div>
+          <div className="col-6">2</div>
+
+        </div>
+      </div>
     </div>
   );
 }

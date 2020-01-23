@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ---------------------------- */
+/* Environment Variables */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+:root{
+    /* ------ Dark Mode ----- */
+    --dark-m-bg:         #181719; 
+    --dark-m-fg-1:       #27242c; 
+    --dark-m-fg-2:       #3d3a41; 
+    --dark-m-ptxt:       #ffffff; 
+    --dark-m-stxt:       #f3f3f9; 
+    /* ------ Light Mode ----- */
+    --light-m-bg:        #f4f2f7;
+    --light-m-fg-1:      #ffffff; 
+    --light-m-fg-2:      #f9f9f9; 
+    --light-m-ptxt:      #27242c; 
+    --light-m-stxt:      #8a8a8e; 
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ---------------------------- */
+/* Dark Mode Class */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+.bg-dm{
+    background-color: var(--dark-m-bg);
+}
+.fg-dm-1{
+    background-color: var(--dark-m-fg-1);
+}
+.fg-dm-2{
+    background-color: var(--dark-m-fg-2);
+}
+.txt-dm-primary{
+    color: var(--dark-m-ptxt)!important;
+}
+.txt-dm-secondary{
+    color: var(--light-m-stxt)!important;
+}
+.bg-lm{
+    background-color: var(--light-m-bg);
+}
+.fg-lm-1{
+    background-color: var(--light-m-fg-1);
+}
+.fg-lm-2{
+    background-color: var(--light-m-fg-2);
+}
+.txt-lm-primary{
+    color: var(--light-m-ptxt)!important;
+}
+.txt-lm-secondary{
+    color: var(--light-m-stxt)!important;
+}
+/* ---------------------------- */
+/* Text Styles */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+.txt-uper{
+    text-transform: uppercase;
+}
+.txt-lower{
+    text-transform: lowercase;
+}
+.font-b{
+    font-family: var(--font-brand)!important;
+}
+.font-0{
+    font-family: var(--font-0)!important;
+}
+.font-1{
+    font-family: var(--font-1)!important;
 }
