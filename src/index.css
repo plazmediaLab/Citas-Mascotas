@@ -2,18 +2,28 @@
 /* Environment Variables */
 /* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
 :root{
+    /* Acept */
+    --acept:                    #25af45;
+    --acept-hover:              #31b851;
+    --acept-active:             #259b40;
+    /* Cancelar */
+    --cancel:                   #e30425;
+    --cancel-hover:             #eb1737;
+    --cancel-active:            #d30524;
+    
+
     /* ------ Dark Mode ----- */
-    --dark-m-bg:         #181719; 
-    --dark-m-fg-1:       #27242c; 
-    --dark-m-fg-2:       #3d3a41; 
-    --dark-m-ptxt:       #ffffff; 
-    --dark-m-stxt:       #f3f3f9; 
+    --dark-m-bg:                #181719; 
+    --dark-m-fg-1:              #27242c; 
+    --dark-m-fg-2:              #3d3a41; 
+    --dark-m-ptxt:              #ffffff; 
+    --dark-m-stxt:              #f3f3f9; 
     /* ------ Light Mode ----- */
-    --light-m-bg:        #f4f2f7;
-    --light-m-fg-1:      #ffffff; 
-    --light-m-fg-2:      #f9f9f9; 
-    --light-m-ptxt:      #27242c; 
-    --light-m-stxt:      #8a8a8e; 
+    --light-m-bg:               #f4f2f7;
+    --light-m-fg-1:             #ffffff; 
+    --light-m-fg-2:             #f9f9f9; 
+    --light-m-ptxt:             #27242c; 
+    --light-m-stxt:             #8a8a8e; 
 }
 /* ---------------------------- */
 /* Dark Mode Class */
@@ -65,4 +75,126 @@
 }
 .font-1{
     font-family: var(--font-1)!important;
+}
+/* ---------------------------- */
+/* Input | Form */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+input{
+    font-size: 1.5rem;
+}
+textarea{
+    height: 10em;
+    font-size: 1.5rem;
+}
+.form-item{
+    margin: 1rem 0;
+}
+.input-100{
+    width: 100%;
+}
+/* ---------------------------- */
+/* Messages | Alert */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+.msn{
+    font-weight: 600;
+    background-color: var(--white);
+    padding: .8em 1.2em;
+    border-radius: .3em;
+    border: .1rem solid #7f7f7f;
+    margin: 0;
+    display: block;
+    color: var(--texto-dark);
+}
+.msn-info{
+    background-color: #cce5ff;
+    border-color: #c0d5ee;
+    color: #325980;
+}
+.msn-ok{
+    background-color: #d5ecdb;
+    border-color: #c8dacd;
+    color: #336e43;
+}
+.msn-error{
+    background-color: #f7d7db;
+    border-color: #e6cacd;
+    color: #733037;
+}
+.msn-warning{
+    background-color: #fff2d0;
+    border-color: #eadec5;
+    color: #836929;
+}
+.msn-s-primary{
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+    border-radius: 0!important;
+}
+.msn-s-secondary{
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: #13693b;
+    border-radius: 0!important;
+}
+.msn-s-orange{
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: #571c08;
+    border-radius: 0!important;
+}
+.msn-s-acept{
+    background-color: var(--acept);
+    border-color: var(--acept);
+    color: #12301e;
+    border-radius: 0!important;
+}
+.msn-s-cancel{
+    background-color: var(--cancel);
+    border-color: var(--cancel);
+    color: var(--white);
+    border-radius: 0!important;
+}
+.msn-s-warning{
+    background-color: var(--warning);
+    border-color: var(--warning);
+    color: var(--warning-text);
+    border-radius: 0!important;
+}
+.msn-s-blue{
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+    border-radius: 0!important;
+}
+.msn-s-black{
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+    border-radius: 0!important;
+}
+/* ---------------------------- */
+/* Cards */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+.card{
+    background-color: var(--white);
+    color: var(--texto-color);
+    padding: 1em 1.5em;
+    border-radius: .4em;
+}
+
+/* ---------------------------------------------------- */
+/* --------- Página Interna GENERALES -------------- */
+/* ------------------ˇˇˇˇˇˇˇˇˇˇˇˇ---------------------- */
+
+input[type="date"],
+input[type="time"]{
+    color: var(--gray-50);
+}
+.form-item label{
+    color: var(--texto-light);
+}
+.form-item input,
+.form-item textarea{
+    border-radius: .4em;
 }
