@@ -1,20 +1,15 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 
 const Cita = ({cita, eliminarCita}) => (
     <Fragment>
       <div className="card mb-2">
-        <p><span className="txt-secondary txt-strong">Mascota:</span> { cita.mascota }</p>
-        <p><span className="txt-secondary txt-strong">Dueño:</span> { cita.propietario }</p>
-        <p><span className="txt-secondary txt-strong">Fecha de alta:</span> { cita.fecha }</p>
-        <p><span className="txt-secondary txt-strong">Hora de ingreso:</span> { cita.hora }</p>
-        <p><span className="txt-secondary txt-strong">Síntomas:</span> { cita.sintomas }</p>
-
-        {/* <p>Mascota: <span>{  }</span></p>
-        <p>Dueño: <span>{  }</span></p>
-        <p>Fecha de alta: <span>{  }</span></p>
-        <p>Hora de ingreso: <span>{  }</span></p>
-        <p>Síntomas: <span>{  }</span></p> */}
+        <p><span className="txt-secondary">Mascota:</span> { cita.mascota }</p>
+        <p><span className="txt-secondary">Dueño:</span> { cita.propietario }</p>
+        <p><span className="txt-secondary">Fecha de alta:</span> { cita.fecha }</p>
+        <p><span className="txt-secondary">Hora de ingreso:</span> { cita.hora }</p>
+        <p><span className="txt-secondary">Síntomas:</span> { cita.sintomas }</p>
         <hr />
         <div className="jc-end">
           <button
@@ -25,5 +20,12 @@ const Cita = ({cita, eliminarCita}) => (
       </div> 
     </Fragment>
   );
+
+
+Cita.propTypes = {
+  cita: PropTypes.object.isRequired,
+  eliminarCita: PropTypes.func.isRequired
+}
+
 
 export default Cita

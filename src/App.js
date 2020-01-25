@@ -1,16 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Formulario from './components/Formulario.js'
 import Cita from './components/Cita.js'
 import TituloVacio from './components/TituloVacio';
 
 function App() {
 
+  // Citas en Local Storage
+  let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+  if (!citasIniciales) {
+    citasIniciales = [];
+  }
+
   /*=================================================================================
   *	 State
   *  [nameState, functionModifiesState]
   * --------------------------------------------------------------------------------*/
   // Arreglo de citas
-  const [citas, guardarCitas] = useState([]);
+  const [citas, guardarCitas] = useState(citasIniciales);
+
+  // [useEffect] realiza ciertas operaciones cuando el state cambia
+  // Se ejecuta cuando el componente esta listo y cuando cambia el estado
+  // Siempre es un Arrow Function
+  // Pasar como segundo parametro un array vacío [], ya que si no se agrega, el useEffect entrara en un ciclo continuo
+  // Este array contendra las dependencias vajo las que se ejecutara [citas]
+  useEffect(() => {
+    if (citasIniciales) {
+      localStorage.setItem('citas', JSON.stringify(citas))
+    }else{
+      localStorage.setItem('citas', JSON.stringify([]));
+    }
+  }, [citas, citasIniciales] );
+
 
   // Funcción que tome las citas actuales y agrege la nueva
   const crearCita = (cita) => {
@@ -25,7 +45,6 @@ function App() {
   }
 
   // Mensaje condicional
-  console.log(citas.length)
   const titulo = citas.length === 0 ? <TituloVacio /> : <h3>Administra tus citas</h3>;
 
   return (
@@ -49,7 +68,6 @@ function App() {
                   eliminarCita={eliminarCita}
                 />
               })}
-              {/* <Cita /> */}
             </div>
           </div>
 
