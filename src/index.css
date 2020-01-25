@@ -13,6 +13,12 @@
     padding: .8em 1.5em;
     border-radius: .4em;
 }
+/* ---------------------------- */
+/* Text */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+.txt-strong{
+    font-weight: bold!important;
+}
 /* ---------------------------------------------------- */
 /* --------- Página Interna GENERALES -------------- */
 /* ------------------ˇˇˇˇˇˇˇˇˇˇˇˇ---------------------- */
@@ -40,4 +46,22 @@ div.col-6{
 }
 hr{
     margin: 1.5rem 0;
+}
+
+.card-empty{
+    margin-top: 2.5rem;
+    background-color: transparent;
+    border: .4rem dashed var(--dark-m-fg-1);
+    border-radius: 1.1em;
+    padding: 1rem 2rem 2rem;
+    color: var(--dark-m-fg-1);
+}
+@media only screen and (min-width: 589px){
+/* Móviles en vertical */
+    .card-empty{
+        margin-top: 6.5rem;
+    }
+}
+.card-empty > *{
+    text-shadow: .13rem .13rem 1px rgba(255, 255, 255, .1);
 }

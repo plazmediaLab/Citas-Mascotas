@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Formulario from './components/Formulario.js'
 import Cita from './components/Cita.js'
+import TituloVacio from './components/TituloVacio';
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
     guardarCitas(nuevasCitas)
   }
 
+  // Mensaje condicional
+  console.log(citas.length)
+  const titulo = citas.length === 0 ? <TituloVacio /> : <h3>Administra tus citas</h3>;
+
   return (
     <div className="container fg-dm-1 p-3 mt-3">
       <h1 className="txt-a-c font-1 mb-5"><i className="a-isotype-filling txt-secondary af-m"></i> Administrador de pacientes</h1>
@@ -35,7 +40,7 @@ function App() {
             />
           </div>
           <div className="col-6">
-            <h3>Administrar tus citas</h3>
+            { titulo }
             <div className="mt-5">
               {citas.map(cita => {
                 return <Cita
