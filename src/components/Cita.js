@@ -1,17 +1,15 @@
 import React, { Fragment } from 'react';
 
 
-const Cita = () => (
+const Cita = ({cita}) => (
     <Fragment>
-      <div className="mt-5">
-        <div className="card mb-2">
-          <p>Mascota: <span></span></p>
-          <p>Dueño: <span></span></p>
-          <p>Fecha ingreso: <span></span></p>
-          <p>Hora ingreso: <span></span></p>
-          <p>Síntomas: <span></span></p>
-        </div>
-      </div>  
+      <div className="card mb-2">
+        <p>Mascota: <span>{ cita.mascota }</span></p>
+        <p>Dueño: <span>{ cita.propietario }</span></p>
+        <p>Fecha de alta: <span>{ cita.fecha }</span></p>
+        <p>Hora de ingreso: <span>{ cita.hora }</span></p>
+        <p>Síntomas: <span>{ cita.sintomas }</span></p>
+      </div> 
     </Fragment>
   );
 

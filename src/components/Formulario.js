@@ -16,6 +16,7 @@ const Formulario = ({crearCita}) => {
     hora: '',
     sintomas: ''
   });
+
   const [error, actualizarError] = useState(false);
 
   /* ============================================================================= */
@@ -89,7 +90,7 @@ const Formulario = ({crearCita}) => {
           />
         </div>
         <div className="form-item">
-          <label>Fecha de ingreso</label>
+          <label>Fecha de alta</label>
           <input 
             type="date"
             name="fecha"
