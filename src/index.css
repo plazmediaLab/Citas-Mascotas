@@ -34,7 +34,10 @@ div.col-6{
 }
 @media only screen and (min-width: 767px){
 /* Móviles en horizontal o tablets en vertical */
-div.col-6{
-    padding: 0 2rem;
+    div.col-6{
+        padding: 0 2rem;
+    }
 }
+hr{
+    margin: 1.5rem 0;
 }
