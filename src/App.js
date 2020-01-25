@@ -14,7 +14,13 @@ function App() {
   // Funcción que tome las citas actuales y agrege la nueva
   const crearCita = (cita) => {
     guardarCitas([...citas, cita])
-    console.log('Sita creada', citas)
+  }
+
+  // Finsión que elimine una cita por su id
+  const eliminarCita = id => {
+    // [.filter()] busca coincidencia de filtro, por lo que queremos es devolver los elementos que son diferentes al id de referencia
+    const nuevasCitas = citas.filter((cita) => cita.id !== id);
+    guardarCitas(nuevasCitas)
   }
 
   return (
@@ -35,8 +41,10 @@ function App() {
                 return <Cita
                   key={cita.id}
                   cita={cita}
+                  eliminarCita={eliminarCita}
                 />
               })}
+              {/* <Cita /> */}
             </div>
           </div>
 
